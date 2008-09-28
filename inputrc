@@ -1,0 +1,26 @@
+
+# Be 8 bit clean.
+set input-meta on
+set output-meta on
+
+# Enable VI bindings.
+set editing-mode vi
+
+# Allow the use of the Insert key.
+"\e[2~": overwrite-mode
+
+# Mappings for Ctrl-Left and Ctrl-Right for word moving.
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+# Ctrl-Backspace and Ctrl-Delete.
+"": backward-kill-word
+"\e[3;5~": kill-word
+
+# Disable bell.
+set bell-style none
+
+# Go directly to listing on ambiguous/unmodified completion.
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+
